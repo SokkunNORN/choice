@@ -1,7 +1,7 @@
 import 'package:choice/common/common.dart';
 import 'package:choice/module/root/controller/root.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class RootView extends GetView<RootController> {
@@ -10,21 +10,10 @@ class RootView extends GetView<RootController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: const [
-            Text(
-              'Choice',
-              style: TextStyle(
-                color: cPrimaryColor,
-                fontWeight: FontWeight.bold
-              ),
-            ),
-          ]
-        ),
-        backgroundColor: cWhiteColor,
-        elevation: 0
+      body: Obx(() => 
+        Container(
+          child: controller.tabBars[controller.tabBarIndex.value].view,
+        )
       ),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
@@ -40,7 +29,9 @@ class RootView extends GetView<RootController> {
             activeColor: cWhiteColor,
             color: cPrimaryColor,
             gap: 8,
-            onTabChange: (index) {},
+            onTabChange: (index) {
+              controller.tabBarIndex.value = index;
+            },
             padding: const EdgeInsets.all(16),
             tabBackgroundColor: cPrimaryColor,
             tabs: controller.tabBars.map((NavIcon item) => 
