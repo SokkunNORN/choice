@@ -14,10 +14,10 @@ class NotificationView extends GetView<NotificationController> {
         title: const Text(
           'Notification',
           style: TextStyle(
-            color: cPrimaryColor,
             fontWeight: FontWeight.bold
           ),
         ),
+        foregroundColor: cPrimaryColor,
         backgroundColor: cWhiteColor,
         elevation: 0
       ),

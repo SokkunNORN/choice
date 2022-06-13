@@ -14,10 +14,10 @@ class HomeView extends GetView<HomeController> {
         title: const Text(
           'Choice',
           style: TextStyle(
-            color: cPrimaryColor,
             fontWeight: FontWeight.bold
           ),
         ),
+        foregroundColor: cPrimaryColor,
         backgroundColor: cWhiteColor,
         elevation: 0
       ),

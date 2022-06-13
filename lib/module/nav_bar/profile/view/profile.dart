@@ -15,10 +15,10 @@ class ProfileView extends GetView<ProfileController> {
         title: const Text(
           'Profile',
           style: TextStyle(
-            color: cPrimaryColor,
             fontWeight: FontWeight.bold
           ),
         ),
+        foregroundColor: cPrimaryColor,
         backgroundColor: cWhiteColor,
         elevation: 0
       ),

@@ -14,10 +14,10 @@ class SearchView extends GetView<SearchController> {
         title: const Text(
           'Search',
           style: TextStyle(
-            color: cPrimaryColor,
             fontWeight: FontWeight.bold
           ),
         ),
+        foregroundColor: cPrimaryColor,
         backgroundColor: cWhiteColor,
         elevation: 0
       ),
