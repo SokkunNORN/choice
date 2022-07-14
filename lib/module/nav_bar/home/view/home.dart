@@ -1,5 +1,6 @@
 import 'package:choice/common/common.dart';
 import 'package:choice/module/nav_bar/home/controller/home.dart';
+import 'package:choice/widgets/post.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,9 +22,7 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: cWhiteColor,
         elevation: 0
       ),
-      body: Container(
-        child: Center(child: Text('Hell...')),
-      ),
+      body: const SingleChildScrollView(child: PostWidget())
     );
   }
 }
